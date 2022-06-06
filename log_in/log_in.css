@@ -1,0 +1,21 @@
+.main-heading {
+	margin-top: 10px;
+	text-align: center;
+}
+.container{
+	margin-top: 100px;
+	width: 500px;
+	padding: 20px;
+	padding-top: 0;
+	border: 2px solid black;h: 500px;
+	
+}
+h1{
+	margin-bottom: 30px;
+}
+body{
+	background-color: antiquewhite;
+}
+.btn{
+	width: 100%;
+}

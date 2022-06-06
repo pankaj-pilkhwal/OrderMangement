@@ -1,0 +1,90 @@
+<!-- 1st attempt for the project
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            /* display: flex; */
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            /* display: inline-block; */
+            width: 500px;
+            margin: auto;
+            border: 2px solid black;
+            background-color: red;
+        }
+        .tab{
+            font-size: 20px;
+            text-align: center;
+            height: 5vh;
+            border: 2px solid black;
+        }
+        .btn{
+            margin: auto;
+            width: 500px;
+            font-size: 25px;
+            margin-bottom: 10px;
+            background-color: black;
+            color: white;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    
+    <button class="btn" onclick="executeOrder(()=>{
+        document.getElementById('zomato').style.backgroundColor = 'green';
+    })">execute order</button>
+    
+    <div class="container">
+        <div class="tab" id="orderplaced">order placed</div>
+        <div class="tab" id="orderreceived">order received</div>
+        <div class="tab" id="sauceadded">Pizza sauce added</div>
+        <div class="tab" id="cheezeadded">Cheeze added on pizza</div>
+        <div class="tab" id="pizzabaked">You pizza is ready</div>
+        <div class="tab" id="zomato">Pizza handed over to the zomato guy</div>
+    </div>
+
+
+    <script>
+    const orderplaced = document.getElementById("orderplaced")
+    const orderreceived = document.getElementById("orderreceived")
+    const sauceadded = document.getElementById("sauceadded")
+    const cheezeadded = document.getElementById("cheezeadded")
+    const pizzabaked = document.getElementById("pizzabaked")
+
+
+    const executeOrder = (callback) =>{
+        orderplaced.style.backgroundColor = 'green';
+
+        setTimeout(() => {
+            orderreceived.style.backgroundColor = 'green';
+            setTimeout(() => {
+                sauceadded.style.backgroundColor = 'green';
+                setTimeout(() => {
+                    cheezeadded.style.backgroundColor = 'green';
+                    setTimeout(() => {
+                        pizzabaked.style.backgroundColor = 'green';
+                        callback();
+                        setTimeout(()=>{
+                            alert("Enjoy your meal")
+                        },2000)
+                    },10000);
+                }, 5000);
+            }, 3000);
+        }, 1000);
+
+
+
+    }
+
+    </script>
+</body>
+</html> -->
